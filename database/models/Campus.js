@@ -20,7 +20,14 @@ const Campus = db.define("campus", {
 
   description: {
     type: Sequelize.STRING,
-  }
+  },
+
+    // Change Made : imageUrl - with a default value, allow null/empty
+    imageUrl: {
+      type: Sequelize.STRING,
+      allowNull: true, // Optional
+      defaultValue: 'https://www.shutterstock.com/image-vector/university-line-building-illustration-on-600nw-2323283973.jpg',
+    }
 });
 
 // Export the campus model
